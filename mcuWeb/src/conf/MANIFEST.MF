@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.1
+Created-By: 1.6.0_20-b02 (Sun Microsystems Inc.)
+Built-Date: 2015-05-28 11:52:22
+Subversion-Info: $Rev: 1319 $
+

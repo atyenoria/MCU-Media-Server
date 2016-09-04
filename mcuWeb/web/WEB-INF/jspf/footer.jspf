@@ -1,0 +1,6 @@
+    </div>
+    <div id="footer">
+	<p><a href="http://www.medooze.com">MedOoze</a> | 2006-2012 Sergio García Murillo. <span>Build Date:<%=BuiltDate%> Revision: <%=SubversionInfo%></span></p>
+    </div>	
+</body>
+</html>

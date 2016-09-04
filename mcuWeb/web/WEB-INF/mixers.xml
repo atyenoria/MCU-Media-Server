@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<root>
+    <mixer ip="127.0.0.1" name="Ubuntu Box" url="http://127.0.0.1:8080/mcu"/>
+</root>

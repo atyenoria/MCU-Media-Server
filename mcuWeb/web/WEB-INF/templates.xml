@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<root>
+    <template compType="1" did="300" mixer="Ubuntu Box@http://127.0.0.1:8080/mcu" name="Test pattern" profile="Medium Quality@512:15:1" size="0" audioCodecs="" videoCodecs="" textCodecs="" />
+</root>

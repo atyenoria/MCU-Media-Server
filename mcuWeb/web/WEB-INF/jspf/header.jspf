@@ -1,0 +1,86 @@
+<jsp:useBean scope="application" id="BuiltDate" class="java.lang.String" />
+<jsp:useBean scope="application" id="SubversionInfo" class="java.lang.String" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>MCU Web Interface</title>
+        <link type="text/css" rel="stylesheet" href="main.css">
+    </head>
+    <body>
+    <div id=header>
+        <h1><a href="/mcuWeb"><img src="icons/home.png">mcuWeb</a></h1>
+    </div>
+    <div id=content>
+<script>
+        
+    var theFrame = null;
+    
+    function callController(method,param)
+    {
+        //Create form
+        var theForm = document.createElement("form");
+        //Set values
+        theForm.action = "controller/" + method;
+        theForm.method = "POST";
+        //Populate form
+        for(var i in param)
+        {
+            //Create input
+            var input = document.createElement("input");
+            //Set values
+            input.type = "hidden";
+            input.name = i;
+            input.value = param[i];
+            //Append to form
+            theForm.appendChild(input);
+        }
+        //Append form
+        document.body.appendChild(theForm);
+        //Submit form
+        theForm.submit();
+    }
+
+    function onControllerAsyncLoaded()
+    {
+    }
+
+    function callControllerAsync(method,param)
+    {
+        //If we don't have iframe
+        if (theFrame==null)
+        {
+            //Create iframe
+            theFrame = document.createElement("iframe");
+            //Set name
+            theFrame.name = "callControllerAsyncIFrame";
+            //Append the iframe
+            document.body.appendChild(theFrame);
+        }
+        
+        //Set callback
+        theFrame.onload = onControllerAsyncLoaded;
+
+        //Create form
+        var theForm = document.createElement("form");
+        //Set values
+        theForm.action = "controller/" + method;
+        theForm.method = "POST";
+        theForm.target = theFrame.name;
+        //Populate form
+        for(var i in param)
+        {
+            //Create input
+            var input = document.createElement("input");
+            //Set values
+            input.type = "hidden";
+            input.name = i;
+            input.value = param[i];
+            //Append to form
+            theForm.appendChild(input);
+        }
+        //Append form
+        document.body.appendChild(theForm);
+        //Submit form
+        theForm.submit();
+    }
+</script>

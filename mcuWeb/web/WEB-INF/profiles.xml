@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<root>
+    <profile name="Low Quality" videoBitrate="128" videoBitrateStrict="true" videoFPS="10" videoQmax="12" videoQmin="4" videoSize="0" intraPeriod="100"/>
+    <profile name="High Quality" videoBitrate="2048" videoBitrateStrict="false" videoFPS="30" videoQmax="6" videoQmin="2" videoSize="1" intraPeriod="300"/>
+    <profile name="Medium Quality" videoBitrate="512" videoBitrateStrict="true" videoFPS="15" videoQmax="8" videoQmin="2" videoSize="1" intraPeriod="150"/>
+</root>
